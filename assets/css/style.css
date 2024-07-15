@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/assets/images/Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(47, 24, 147, 1);
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    color: white;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.logo a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.25px;
+    letter-spacing: -0.2926828861236572px;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+
+}
+
+/* .position {
+    position: absolute;
+    right: 65%;
+} */
+
+.nav {
+    padding: 10px 20px 0px 20px;
+    position: relative;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    width: 100px;
+    height: 40.1px;
+    border-radius: 100px;
+    background: rgba(37, 218, 197, 1);
+    border: none;
+}
+
+a {
+    color: white;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.align-item {
+    align-items: center;
+    display: flex;
+}
+
+.align-item-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    /* height: 211px; */
+    font-family: "DM Sans", sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:992px) {
+    label[for="menubar"] {
+        width: 30px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        justify-content: space-between;
+    }
+
+    label[for="menubar"]>span {
+        width: 100%;
+        background-color: red;
+        height: 6px;
+        border-radius: 5px;
+    }
+
+    div.menulist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        transition: all 150ms linear;
+        height: 100vh;
+    }
+
+    input[type="checkbox"]:checked~div.menulist {
+        right: 0;
+        background-color: rgb(2, 25, 25);
+    }
+
+    input[type="checkbox"]:checked+label[for="menubar"] :first-child {
+        transform: rotate(40deg);
+        transform-origin: left;
+    }
+
+    input[type="checkbox"]:checked+label[for="menubar"] :nth-child(2) {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    input[type="checkbox"]:checked+label[for="menubar"] :last-child {
+        transform: rotate(-40deg);
+        transform-origin: left;
+    }
+
+    .logo a {
+        position: absolute;
+        left: 0;
+        transition: all 100ms linear;
+    }
+
+    input[type="checkbox"]:checked~div.menulist ul.menulist{
+         flex-direction: column;
+         margin-top: 20px;
+    }
+}
